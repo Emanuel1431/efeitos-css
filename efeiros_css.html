@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>efeito css</title>
+</head>
+<style>
+    body{ width: 100%;
+           height: 100vh;
+            margin: 0px;
+            display: flex;
+            justify-content:center;
+    }
+    .retangulo_preto{
+        height: 80px;
+        width: 80%;
+        background-color: black;
+        color: white;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        top: 0px;
+        border-radius: 0px 0px 30px 30px;
+        z-index: 1;
+    }
+    .Menu1{
+        width: 100px;
+        height: 300px;
+        background-color: yellow;
+        position: absolute;
+        left: 300px;
+        top: -208px;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+    }
+    .Menu2{
+        width: 100px;
+        height: 300px;
+        background-color: orange;
+        position: absolute;
+        left: 660px;
+        top: -208px;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+    }
+    .Menu3{
+        width: 100px;
+        height: 300px;
+        background-color: green;
+        position: absolute;
+        left: 1050px;
+        top: -208px;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+    }
+    .opcao:hover{
+        color: red;
+    }
+    .deslizar{
+        animation: descer 5s forwards;
+    }
+    @keyframes descer{
+        0%{top:-208px}
+        100%{top:80px}
+    }
+        
+    
+</style>
+<body>
+    <div class="retangulo_preto">
+        <div onclick="AnimaMenu1();" class="opcao">Menu 1 </div>
+        <div onclick="AnimaMenu2();"class="opcao">Menu 2</div>
+        <div onclick="AnimaMenu3();"class="opcao">Menu 3</div>
+    </div>
+     <div class= "Menu1" id="Menu1">
+        <div class="opcao">Fusca </div>
+        <div class="opcao">Kombi </div>
+        <div class="opcao">Pampa </div>
+        <div class="opcao">Gol </div>
+        <div class="opcao">Golf </div>
+        <div class="opcao">Brasilia </div>
+     </div>
+      <div class= "Menu2" id="Menu2">
+        <div class="opcao"> 1 </div>
+        <div class="opcao"> 2 </div>
+        <div class="opcao"> 3 </div>
+        <div class="opcao"> 4 </div>
+        <div class="opcao"> 5 </div>
+        <div class="opcao"> 6 </div>
+     </div>
+      <div class= "Menu3" id="Menu3">
+        <div class="opcao"> 7 </div>
+        <div class="opcao"> 8 </div>
+        <div class="opcao"> 9 </div>
+        <div class="opcao"> 10 </div>
+        <div class="opcao"> 11</div>
+        <div class="opcao"> 12 </div>
+     </div>
+</body>
+<script>
+    function AnimaMenu1()
+    {
+        Menu3.classList.remove("deslizar")
+        Menu2.classList.remove("deslizar")
+        Menu1.classList.add("deslizar")
+    }
+    function AnimaMenu2(){
+         Menu3.classList.remove("deslizar")
+         Menu2.classList.add("deslizar")
+         Menu1.classList.remove("deslizar")
+
+    }
+    function AnimaMenu3(){
+         Menu3.classList.add("deslizar")
+         Menu2.classList.remove("deslizar")
+         Menu1.classList.remove("deslizar")
+        
+    } 
+
+</script>
+</html>
